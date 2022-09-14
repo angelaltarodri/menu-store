@@ -1,0 +1,5 @@
+to start:
+    npm run start
+to create new controllers:
+    nest g co controllers/categories --flat
+developer.mozilla.org/en-US/docs/HTTP/Status
