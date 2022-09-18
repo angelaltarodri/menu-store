@@ -15,7 +15,7 @@ import {
 // import { Response } from 'express';
 import { ProductService } from 'src/services/product.service';
 import { ParseIntPipe } from '../common/parse-int.pipe';
-import { CreateProductDto } from '../dtos/products.dtos';
+import { CreateProductDto, UpdateProductoDto } from '../dtos/products.dtos';
 @Controller('products')
 export class ProductsController {
   constructor(private productsService: ProductService) {}
@@ -56,11 +56,14 @@ export class ProductsController {
     //   message: 'acción de crear',
     //   payload,
     // };
-    this.productsService.create(payload);
+    return this.productsService.create(payload);
   }
 
   @Put(':productId')
-  update(@Param('productId') productId: number, @Body() payload: any) {
+  update(
+    @Param('productId') productId: number,
+    @Body() payload: UpdateProductoDto,
+  ) {
     return this.productsService.update(+productId, payload);
   }
 

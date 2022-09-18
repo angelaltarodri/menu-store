@@ -2,4 +2,15 @@ to start:
     npm run start
 to create new controllers:
     nest g co controllers/categories --flat
+to create new services:
+    nest g s services/categories --flat
+
 developer.mozilla.org/en-US/docs/HTTP/Status
+
+nest g pipe common/parse-int
+
+ParseIntPipe
+
+npm i class-validator class-transformer
+
+npm i @nestjs/mapped-types
